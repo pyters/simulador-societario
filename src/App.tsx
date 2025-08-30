@@ -16,11 +16,11 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-blue-600 text-white shadow-lg">
+      <header className="bg-gray-800 text-white shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <h1 className="text-3xl font-bold">Simulador Societário</h1>
-          <p className="text-blue-100 mt-2">
-            Ferramenta de planejamento financeiro empresarial
+          <p className="text-gray-300 mt-2">
+            Ferramenta de planejamento financeiro empresarial - <span className="text-red-500 font-medium">Joicont</span>
           </p>
         </div>
       </header>
@@ -35,7 +35,7 @@ function App() {
                 onClick={() => setCurrentPage(page.id)}
                 className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors duration-200 ${
                   currentPage === page.id
-                    ? 'border-blue-500 text-blue-600'
+                    ? 'border-red-500 text-red-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
@@ -50,9 +50,9 @@ function App() {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-blue-600 mb-4">✅ Tailwind CSS funcionando!</h1>
-          <p className="mb-2">Página atual: <strong>{currentPage}</strong></p>
-          <p className="text-gray-600">Clique nas abas acima para testar a navegação</p>
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">✅ Design atualizado para Joicont!</h1>
+          <p className="mb-2">Página atual: <strong className="text-red-600">{currentPage}</strong></p>
+          <p className="text-gray-600">Paleta de cores alinhada com sua identidade visual</p>
         </div>
       </main>
     </div>

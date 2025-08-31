@@ -1,9 +1,62 @@
 import { useState } from 'react';
+import SetupPage from './pages/SetupPage';
 
 type PageName = 'setup' | 'simulation' | 'charts' | 'summary' | 'export';
 
+interface Partner {
+  id: string;
+  name: string;
+  percentage: number;
+}
+
+interface SimulationData {
+  partners: Partner[];
+  simulationYears: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 function App() {
   const [currentPage, setCurrentPage] = useState<PageName>('setup');
+  const [simulationData, setSimulationData] = useState<SimulationData | null>(null);
+
+  const handleSetupComplete = (data: Partial<SimulationData>) => {
+    setSimulationData(data as SimulationData);
+    setCurrentPage('simulation');
+  };
+
+  const renderPageContent = () => {
+    switch (currentPage) {
+      case 'setup':
+        return <SetupPage onSetupComplete={handleSetupComplete} />;
+      case 'simulation':
+        return (
+          <div className="text-center py-12">
+            <h2 className="text-xl text-gray-600">Página de Simulação em desenvolvimento...</h2>
+          </div>
+        );
+      case 'charts':
+        return (
+          <div className="text-center py-12">
+            <h2 className="text-xl text-gray-600">Página de Gráficos em desenvolvimento...</h2>
+          </div>
+        );
+      case 'summary':
+        return (
+          <div className="text-center py-12">
+            <h2 className="text-xl text-gray-600">Página de Resumo em desenvolvimento...</h2>
+          </div>
+        );
+      case 'export':
+        return (
+          <div className="text-center py-12">
+            <h2 className="text-xl text-gray-600">Página de Exportação em desenvolvimento...</h2>
+          </div>
+        );
+      default:
+        return <SetupPage onSetupComplete={handleSetupComplete} />;
+    }
+  };
 
   const pages = [
     { id: 'setup' as PageName, label: 'Configuração', icon: '⚙️' },
@@ -79,26 +132,7 @@ function App() {
 
         {/* Page Content */}
         <main className="flex-1 p-6">
-          <div className="bg-white rounded-lg shadow-md p-8 text-center h-full">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">🧩 Testando Menu Lateral!</h1>
-            <p className="mb-4">Página atual: <strong className="text-red-600">{currentPage}</strong></p>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-gray-700 mb-3">📋 <strong>Layout Sidebar:</strong></p>
-              <ul className="text-sm text-gray-600 space-y-2 text-left max-w-md mx-auto">
-                <li>• ✅ Logo centralizada no topo</li>
-                <li>• ✅ Menu vertical com ícones grandes</li>
-                <li>• ✅ Página ativa destacada em vermelho</li>
-                <li>• ✅ Header dinâmico mostra página atual</li>
-                <li>• ✅ Mais espaço para conteúdo principal</li>
-                <li>• ✅ Layout profissional tipo dashboard</li>
-              </ul>
-              <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <p className="text-sm text-yellow-800">
-                  💡 <strong>Teste a navegação:</strong> Clique nas opções do menu lateral
-                </p>
-              </div>
-            </div>
-          </div>
+          {renderPageContent()}
         </main>
       </div>
     </div>

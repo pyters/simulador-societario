@@ -4,7 +4,9 @@ Um simulador financeiro web para planejamento societário e análise de cenário
 
 ## 🚀 Funcionalidades
 
-### ✅ Implementadas (Fase 1 Completa)
+### ✅ Implementadas
+
+#### **Fase 1: Base e Design ✅**
 - **🎨 Design System Joicont**: Paleta de cores alinhada com identidade visual
 - **📱 Menu Lateral Sidebar**: Layout profissional tipo dashboard
 - **🖼️ Logo e Branding**: Integração completa da marca Joicont
@@ -13,11 +15,21 @@ Um simulador financeiro web para planejamento societário e análise de cenário
 - **⚡ Tailwind CSS**: Framework configurado com versões estáveis
 - **🔧 Git Repository**: Controle de versão completo com checkpoints
 
+#### **Fase 2: Configuração de Sócios ✅**
+- **⚙️ Página de Setup**: Configuração inicial completa e funcional
+- **👥 Gestão de Sócios**: Adicionar/remover sócios dinamicamente
+- **🎛️ Controles Duplos**: Slider + input numérico sincronizados
+- **📏 Grid 50/50**: Layout nome/participação otimizado
+- **🔍 Validação Robusta**: React Hook Form + Zod Schema
+- **📊 Feedback Visual**: Verde/vermelho para total de percentuais
+- **📅 Slider de Anos**: Seleção intuitiva de 1-10 anos
+- **✅ Defaults Inteligentes**: João da Silva (50%) + Pedro Souza (50%)
+
 ### 🚧 Em Desenvolvimento
-- **Tabela de Simulação**: Edição em massa mês a mês dos dados financeiros
-- **Gráficos**: Visualizações dos resultados da simulação
-- **Resumo**: Valores consolidados e métricas importantes
-- **Exportação**: Download em PDF e dados estruturados
+- **Tabela de Simulação**: Edição mês a mês com aportes dinâmicos
+- **Gráficos**: Visualizações da evolução societária
+- **Resumo**: ROI e métricas consolidadas
+- **Exportação**: PDF profissional e dados estruturados
 
 ## 🛠 Tech Stack
 
@@ -54,28 +66,38 @@ Um simulador financeiro web para planejamento societário e análise de cenário
 - [x] **Logo e Branding** - Integração completa da marca Joicont
 - [x] **Layout Responsivo** - Header dinâmico + sidebar fixa
 
-### Fase 2: Simulação Financeira 🚧
+### Fase 2: Configuração de Sócios ✅
+- [x] **Página de Setup completa** - Interface de configuração inicial
+- [x] **React Hook Form + Zod** - Validação robusta e formulários reativos
+- [x] **Gestão dinâmica de sócios** - Adicionar/remover com mínimo de 2
+- [x] **Slider de anos** - Seleção intuitiva de 1-10 anos de simulação
+- [x] **Controles duplos** - Slider + input numérico sincronizados
+- [x] **Grid 50/50** - Layout otimizado nome/participação
+- [x] **Validação em tempo real** - Feedback visual para percentuais
+- [x] **Defaults inteligentes** - Sócios padrão prontos para usar
+
+### Fase 3: Simulação Financeira 🚧
 - [ ] Tabela editável para dados mensais
 - [ ] Campos: Caixa Total, Lucro/Prejuízo, Aportes por Sócio
 - [ ] Tipos de aporte: Investimento, Caixa, Parcial
 - [ ] Cálculo automático de percentuais e valores da empresa
 - [ ] Persistência local dos dados
 
-### Fase 3: Visualização 📊
+### Fase 4: Visualização 📊
 - [ ] Gráficos de evolução do caixa
 - [ ] Gráficos de lucro/prejuízo ao longo do tempo
 - [ ] Gráficos de aportes por sócio
 - [ ] Evolução do valor da empresa
 - [ ] ROI por sócio
 
-### Fase 4: Resumo e Análises 📈
+### Fase 5: Resumo e Análises 📈
 - [ ] Métricas consolidadas
 - [ ] Total de lucro/prejuízo acumulado
 - [ ] Total de investimentos e aportes
 - [ ] ROI individual de cada sócio
 - [ ] Valor final da empresa
 
-### Fase 5: Exportação 💾
+### Fase 6: Exportação 💾
 - [ ] Export para PDF com layout profissional
 - [ ] Export de dados em JSON/CSV
 - [ ] Salvamento local no browser
